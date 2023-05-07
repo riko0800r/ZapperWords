@@ -1,4 +1,7 @@
 -- button library
+middle = require 'librarys/middleclass'
+
+
 local gr = love.graphics
 local mouse = love.mouse
 
@@ -6,7 +9,7 @@ button2 = {		-- default settings
     text    = "Down",
 	colori	= { 255,  20, 147, 255 },
 	colora	= { 100, 255,  45, 255 },
-	colortext	= { 1, 5, 88, 1 },
+	colortext	= { 86, 223, 156, 1 },
 	mode    = 'fill',
 	object	= 'rect',
 	x		= 225,
