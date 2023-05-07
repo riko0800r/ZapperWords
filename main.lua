@@ -1,10 +1,8 @@
-
-
 function love.load()
     
     middle = require 'librarys/middleclass'
     
-    button = require 'librarys/buttons'
+    
     
     Camera = require 'librarys/vrld-hump-08937cc/camera'
     
@@ -25,7 +23,7 @@ function love.load()
     inimigo.vivo  =  "vivo"
     inimigo.ATK   =  25
     
-	inimigo.spr   =  love.graphics.newImage("inimigo1.png")
+    inimigo.spr   =  love.graphics.newImage("inimigo1.png")
     
     
     Player         = {}
@@ -91,8 +89,8 @@ function moveInimigo(Dt)
         inimigo.x = inimigo.x + inimigo.speed * Dt
         
     elseif Player.x - inimigo.x < 0 then
+    elseif Player.x - inimigo.x < 0 then
         inimigo.x = inimigo.x - inimigo.speed * Dt
-        
     end
     
     
@@ -100,12 +98,9 @@ end
 
 function love.update(Dt)
     moveInimigo(Dt)
-    button2:update()
     
-    button:update()
     
     cam:lookAt(Player.x,Player.y)
-    
 	
 end
 
@@ -120,6 +115,4 @@ function love.draw()
         love.graphics.draw(Player.spr,Player.x,Player.y,0,5,5,8,8)
     cam:detach()
     
-    button2:draw()
-    button:draw()
 end
