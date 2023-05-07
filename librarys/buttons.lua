@@ -41,17 +41,16 @@ end
 function button:draw()
 	local clr
 	if self.active then clr = self.colora else clr = self.colori end
-	gr.setColor( clr )
-	if self.object=='circle' then love
-	  graphics.circ( self.mode, self.x, self.y, self.r ) end
-	if self.object=='rect' then gr.rectangle( self.mode, self.x-self.w/2, self.y-self.h/2, self.w, self.h ) end
+	love.graphics.setColor( clr )
+	if self.object=='circle' then love.graphics.circ( self.mode, self.x, self.y, self.r ) end
+	if self.object=='rect' then love.graphics.rectangle( self.mode, self.x-self.w/2, self.y-self.h/2, self.w, self.h ) end
 	if self.object=='image' then
 		local w, h = 16,16
-		gr.draw( self.image, self.x, self.y, 0, self.w/w, self.h/h, w/2, h/2 )
+		love.graphics.draw( self.image, self.x, self.y, 0, self.w/w, self.h/h, w/2, h/2 )
 		end
 	if self.text then
-		gr.setColor(self.colort)
-		gr.print( self.text, self.x, self.y)
+		love.graphics.setColor(self.colort)
+		love.graphics.print( self.text, self.x, self.y)
 		
 	end
 end
