@@ -1,2 +1,2 @@
-# ZapperWords
-Um jogo onde você dorme e acorda em um sonho
+# ZapperWord
+Um projeto de jogo rpg mundo aberto
