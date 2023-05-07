@@ -2,9 +2,6 @@
 middle = require 'librarys/middleclass'
 
 
-local gr = love.graphics
-local mouse = love.mouse
-
 button2 = {		-- default settings
     text    = "Down",
 	colori	= { 255,  20, 147, 255 },
@@ -45,7 +42,8 @@ function button:draw()
 	local clr
 	if self.active then clr = self.colora else clr = self.colori end
 	gr.setColor( clr )
-	if self.object=='circle' then gr.circ( self.mode, self.x, self.y, self.r ) end
+	if self.object=='circle' then love
+	  graphics.circ( self.mode, self.x, self.y, self.r ) end
 	if self.object=='rect' then gr.rectangle( self.mode, self.x-self.w/2, self.y-self.h/2, self.w, self.h ) end
 	if self.object=='image' then
 		local w, h = 16,16
