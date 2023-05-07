@@ -49,7 +49,7 @@ function button:draw()
 		love.graphics.draw( self.image, self.x, self.y, 0, self.w/w, self.h/h, w/2, h/2 )
 		end
 	if self.text then
-		love.graphics.setColor(self.colort)
+		love.graphics.setColor(self.colort,255)
 		love.graphics.print( self.text, self.x, self.y)
 		
 	end
