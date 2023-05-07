@@ -90,7 +90,7 @@ function button2:draw()
 	if self.object=='rect' then gr.rectangle( self.mode, self.x-self.w/2, self.y-self.h/2, self.w, self.h ) end
 	if self.object=='image' then
 		local w, h = 16,16
-		love.graphics.draw( self.image, self.x, self.y, 0, self.w/w, self.h/h, w/2, h/2 )
+		love.graphics.draw( self.image, self.x, self.y, 0, self.w/w, self.h/h, w/2, h/2)
 	end
 	
 		love.graphics.setColor(self.colortext)
