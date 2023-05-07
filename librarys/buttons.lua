@@ -93,8 +93,8 @@ function button2:draw()
 		gr.draw( self.image, self.x, self.y, 0, self.w/w, self.h/h, w/2, h/2 )
 	end
 	
-		gr.setColor(self.colortext)
-		gr.print( self.text, self.x, self.y)
+		love.graphics.setColor(self.colortext)
+		love.graphics.print( self.text, self.x, self.y)
 end
 
 function button2:update()
