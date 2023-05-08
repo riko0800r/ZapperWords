@@ -34,20 +34,6 @@ function love.load()
     
     inimigo.spr   =  love.graphics.newImage("inimigo1.png")
     
-    
-    Player         = {}
-    
-    
-	Player.tmX     = 16
-	Player.tmY     = 16
-	Player.x       = 300
-	Player.y       = 300
-	Player.vivo    = "vivo"
-	Player.HP      = 125
-	Player.speed   = 150
-	Player.atkTime = 0.5
-	
-	Player.spr     = love.graphics.newImage("zapper1.png")
 	
 	
 	
