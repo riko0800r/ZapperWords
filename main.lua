@@ -2,7 +2,16 @@ function love.load()
     
     middle = require 'librarys/middleclass'
     
-    
+    Player = middleclass.class('Player')
+    function PlayerNovo(x,y)
+      Player.spr = love.graphics.newImage("zapper1.png")
+      Player.x = x
+      Player.y = y
+      Player.vivo = "vivo"
+      Player.HP = 125
+      Player.speed = 150
+  end
+
     
     Camera = require 'librarys/vrld-hump-08937cc/camera'
     
