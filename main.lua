@@ -141,17 +141,15 @@ end
 local botoes = {}
 
 
-function love.load()
-    table.insert(botoes,NovoBotao(
-        "down",
-        250,
-        400,
-        50,
-        50,
-        function()
-            
-            
-        end ))
+  table.insert(botoes,NovoBotao(
+    "down",
+    250,
+    400,
+    50,
+    50,
+    function()
+      
+    end ))
     
     table.insert(botoes,NovoBotao(
         "Up",
