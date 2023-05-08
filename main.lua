@@ -109,5 +109,61 @@ function love.draw()
     
         love.graphics.draw(Player.spr,Player.x,Player.y,0,5,5,8,8)
     cam:detach()
+    for i,botao in ipairs(botoes) do
+        
+      love.graphics.rectangle(
+          "fill",
+          200,
+          400,
+          largura,
+          altura 
+          )
+    end
+    
+
+
+end
+  
+function NovoBotao(texto,x,y,altura,largura,fn)
+    -- botao
+    
+    return{
+        texto = texto,
+        x = x,
+        y = y,
+        altura = altura,
+        largura = largura,
+        fn = fn
+        
+    }
+end
+
+local botoes = {}
+
+
+function love.load()
+    table.insert(botoes,NovoBotao(
+        "down",
+        250,
+        400,
+        50,
+        50,
+        function()
+            
+            
+        end ))
+    
+    table.insert(botoes,NovoBotao(
+        "Up",
+        250,
+        500,
+        50,
+        50,
+        function()
+            Player.y = Player.y - Player.speed
+            
+        end ))
     
 end
+
+ 
